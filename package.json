@@ -6,7 +6,9 @@
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js --network sepolia",
     "seed": "hardhat run scripts/seed-markets.js --network sepolia",
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "test:basic": "hardhat test test/PredictionMarket.ts",
+    "test:fhe": "hardhat test test/PredictionMarket.fhe.ts"
   },
   "keywords": [
     "FHE",
@@ -26,9 +28,16 @@
   "devDependencies": {
     "@fhevm/hardhat-plugin": "^0.3.0-1",
     "@fhevm/mock-utils": "^0.3.0-1",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
     "@types/node": "^22.0.0",
     "@zama-fhe/relayer-sdk": "^0.3.0-5",
-    "hardhat": "^2.26.3"
+    "chai": "^4.3.0",
+    "hardhat": "^2.26.3",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   }
 }
